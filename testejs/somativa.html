@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somativa</title>
+</head>
+
+<body>
+    <script src="./scripts/script.js"></script>
+    <div class="container-form">
+        <a class="titulo">Cadastro de Unidade De Saúde</a>
+        <form class="formContato">
+            <input class="inNome" placeholder="Nome da unidade de saúde" type="text" id="nome" name="nome"
+                required><br><br>
+            <input class="inRua" placeholder="Rua" type="text" id="rua" name="rua" required><br><br>
+            <input class="inNumero" placeholder="Número" type="text" id="numero" name="numero" required><br><br>
+            <input class="inBairro" placeholder="Bairro" type="text" id="bairro" name="bairro" required><br><br>
+            <input class="inCidade" placeholder="Cidade" type="text" id="cidade" name="cidade" required><br><br>
+            <input class="inEstado" placeholder="Estado (UF)" type="text" id="estado" name="estado" required><br><br>
+            <input class="inNumMedicos" placeholder="Número de Médicos" type="number" id="numMedicos" name="numMedicos"
+                required><br><br>
+            <input class="inData" placeholder="Nome da unidade de saúde" type="date" id="data" name="data"
+                required><br><br>
+
+            <input class="btnCadastrar" type="submit" value="Cadastrar" onclick="cadastrar()">
+        </form>
+        <br><br>
+        <button id="btnListar" class="btnListar"type="button" onclick="listar()">Listar Unidades de Saúde</button>
+        <div id="lista" style="display:none">
+            <ol>
+            </ol>
+        </div>
+    </div>
+
+</body>
+<style>
+    * {
+        font-family: Arial;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnListar {
+        color: white;
+        background-color: purple;
+        border: none;
+        border-radius: 5px;
+        width: 180px;
+        height: 50px;
+        align-self: center;
+
+    }
+
+    .btnCadastrar {
+        color: white;
+        background-color: purple;
+        border: none;
+        border-radius: 5px;
+        width: 80px;
+        height: 25px;
+        align-self: center;
+    }
+
+
+    .container-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        height: 66.5vh;
+        background-color: none;
+    }
+
+    .formContato {
+        padding-top: 40px;
+        width: 400px;
+        height: 70vh;
+        margin: 0 auto;
+        background-color: none;
+        text-align: -webkit-center;
+    }
+
+    .titulo {
+        padding-top: 100px;
+        font-size: xx-large;
+        color: purple;
+    }
+
+    .inData {
+        width: 90px;
+        border: 1px solid purple;
+        height: 25px;
+    }
+
+    .inNome,
+    .inRua,
+    .inNumero,
+    .inBairro,
+    .inCidade,
+    .inEstado,
+    .inNumMedicos {
+        height: 25px;
+        width: 180px;
+        border: 1px solid purple;
+    }
+
+    .inData:focus,
+    .inNome:focus,
+    .inRua:focus,
+    .inNumero:focus,
+    .inBairro:focus,
+    .inCidade:focus,
+    .inEstado:focus,
+    .inNumMedicos:focus {
+        background-color: #e6ccff;
+
+    }
+</style>
+
+</html>
